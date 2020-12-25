@@ -18,7 +18,7 @@ TodoList.propTypes = {
       text: PropTypes.string.isRequired
     }).isRequired
   ).isRequired,
-  toggleTodo: PropTypes.func.isRequired
+  dispatch_toggleTodo: PropTypes.func.isRequired
 }
 
 export { TodoList }
