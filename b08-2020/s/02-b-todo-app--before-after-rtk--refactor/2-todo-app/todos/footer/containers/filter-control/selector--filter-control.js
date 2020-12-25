@@ -1,4 +1,4 @@
-import { setVisibilityFilter } from './slice--filter-control'
+import { setVisibilityFilter } from '~/todos/slice--filter-control'
 
 const mapStateToProps = (state, ownProps) => ({
   active: ownProps.filter === state.visibilityFilter
