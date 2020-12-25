@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Link = ({ active, children, setVisibilityFilter, filter }) => (
+const Link = ({ active, children, dispatch_setVisibilityFilter, filter }) => (
   <button
-    onClick={() => setVisibilityFilter(filter)}
+    onClick={() => dispatch_setVisibilityFilter(filter)}
     disabled={active}
     style={{
       marginLeft: '4px'
@@ -16,7 +16,7 @@ const Link = ({ active, children, setVisibilityFilter, filter }) => (
 Link.propTypes = {
   active: PropTypes.bool.isRequired,
   children: PropTypes.node.isRequired,
-  setVisibilityFilter: PropTypes.func.isRequired,
+  dispatch_setVisibilityFilter: PropTypes.func.isRequired,
   filter: PropTypes.string.isRequired
 }
 

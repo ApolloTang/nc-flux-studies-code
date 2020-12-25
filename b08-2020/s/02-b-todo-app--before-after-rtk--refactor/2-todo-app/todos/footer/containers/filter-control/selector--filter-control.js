@@ -4,6 +4,6 @@ const mapStateToProps = (state, ownProps) => ({
   active: ownProps.filter === state.visibilityFilter
 })
 
-const mapDispatchToProps = { setVisibilityFilter }
+const mapDispatchToProps = { dispatch_setVisibilityFilter: setVisibilityFilter }
 
 export { mapStateToProps, mapDispatchToProps }
