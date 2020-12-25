@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
 
-import { addTodo } from '~/todos/todo-list/slice--todo-list'
-
-const mapDispatch = { addTodo }
+import { mapDispatch } from './selector--add-todo'
 
 const AddTodo = ({ addTodo }) => {
   const [todoText, setTodoText] = useState('')
