@@ -1,4 +1,4 @@
-import todos, { addTodo, toggleTodo } from './todosSlice'
+import todos, { addTodo, toggleTodo } from './slice--todo-list'
 
 describe('todos reducer', () => {
   it('should handle initial state', () => {

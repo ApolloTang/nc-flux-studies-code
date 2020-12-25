@@ -1,5 +1,5 @@
 import { createSelector } from '@reduxjs/toolkit'
-import { toggleTodo } from '~/todos/todo-list/todosSlice'
+import { toggleTodo } from '~/todos/todo-list/slice--todo-list'
 import { VisibilityFilters } from '~/todos/footer/containers/filter-control/slice--filter-control'
 
 const selectTodos = state => state.todos
