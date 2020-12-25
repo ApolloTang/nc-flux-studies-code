@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 import { mapDispatch } from './selector--add-todo'
 
-const AddTodo = ({ addTodo }) => {
+const AddTodo = ({ dispatch_addTodo }) => {
   const [todoText, setTodoText] = useState('')
 
   const onChange = e => setTodoText(e.target.value)
@@ -16,7 +16,7 @@ const AddTodo = ({ addTodo }) => {
           if (!todoText.trim()) {
             return
           }
-          addTodo(todoText)
+          dispatch_addTodo(todoText)
           setTodoText('')
         }}
       >

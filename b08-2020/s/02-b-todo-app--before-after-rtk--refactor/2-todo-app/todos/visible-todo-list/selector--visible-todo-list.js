@@ -25,7 +25,9 @@ const mapStateToProps = state => ({
   todos: selectVisibleTodos(state)
 })
 
-const mapDispatchToProps = { toggleTodo }
+const mapDispatchToProps = {
+  dispatch_toggleTodo: toggleTodo
+}
 
 export {
   mapStateToProps,
