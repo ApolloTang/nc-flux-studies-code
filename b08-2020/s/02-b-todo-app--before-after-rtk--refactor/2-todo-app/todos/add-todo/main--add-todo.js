@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 import { mapDispatch } from './selector--add-todo'
 
-const AddTodo = ({ dispatch_addTodo }) => {
+const AddTodoUnConnected = ({ dispatch_addTodo }) => {
   const [todoText, setTodoText] = useState('')
 
   const onChange = e => setTodoText(e.target.value)
@@ -27,7 +27,11 @@ const AddTodo = ({ dispatch_addTodo }) => {
   )
 }
 
-export default connect(
+const AddTodo = connect(
   null,
   mapDispatch
-)(AddTodo)
+)(AddTodoUnConnected)
+
+export {
+  AddTodo
+}
