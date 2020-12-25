@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
 
-import { addTodo } from './todo-list/todosSlice'
+import { addTodo } from '~/todos/todo-list/todosSlice'
 
 const mapDispatch = { addTodo }
 
