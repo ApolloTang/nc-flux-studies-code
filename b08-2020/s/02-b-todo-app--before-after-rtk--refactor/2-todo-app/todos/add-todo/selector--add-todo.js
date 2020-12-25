@@ -1,4 +1,4 @@
-import { addTodo } from '~/todos/todo-list/slice--todo-list'
+import { addTodo } from '~/todos/slice--todos'
 
 const mapDispatch = {
   dispatch_addTodo : addTodo
