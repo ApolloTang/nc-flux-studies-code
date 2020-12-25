@@ -1,10 +1,8 @@
 import { combineReducers } from 'redux'
-import { todosReducer } from '~/todos/slice--todos'
-import visibilityFilterReducer from '~/todos/slice--filter-control'
+import { todosSlice } from '~/todos/slice'
 
 const rootReducer = combineReducers({
-  todos: todosReducer,
-  visibilityFilter: visibilityFilterReducer
+  todos: todosSlice,
 })
 
 export { rootReducer }
