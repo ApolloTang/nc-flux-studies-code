@@ -1,14 +1,14 @@
-import {todosReducer, addTodo, toggleTodo } from '../slice--todo-list'
+import {reducer_todos, action_addTodo, action_toggleTodo } from '../slice--todo-list'
 
 describe('todos reducer', () => {
   it('should handle initial state', () => {
-    expect(todosReducer(undefined, {})).toEqual([])
+    expect(reducer_todos(undefined, {})).toEqual([])
   })
 
   it('should handle ADD_TODO', () => {
     expect(
-      todosReducer([], {
-        type: addTodo.type,
+      reducer_todos([], {
+        type: action_addTodo.type,
         payload: {
           text: 'Run the tests',
           id: 0
@@ -23,7 +23,7 @@ describe('todos reducer', () => {
     ])
 
     expect(
-      todosReducer(
+      reducer_todos(
         [
           {
             text: 'Run the tests',
@@ -32,7 +32,7 @@ describe('todos reducer', () => {
           }
         ],
         {
-          type: addTodo.type,
+          type: action_addTodo.type,
           payload: {
             text: 'Use Redux',
             id: 1
@@ -53,7 +53,7 @@ describe('todos reducer', () => {
     ])
 
     expect(
-      todosReducer(
+      reducer_todos(
         [
           {
             text: 'Run the tests',
@@ -67,7 +67,7 @@ describe('todos reducer', () => {
           }
         ],
         {
-          type: addTodo.type,
+          type: action_addTodo.type,
           payload: {
             text: 'Fix the tests',
             id: 2
@@ -95,7 +95,7 @@ describe('todos reducer', () => {
 
   it('should handle TOGGLE_TODO', () => {
     expect(
-      todosReducer(
+      reducer_todos(
         [
           {
             text: 'Run the tests',
@@ -109,7 +109,7 @@ describe('todos reducer', () => {
           }
         ],
         {
-          type: toggleTodo.type,
+          type: action_toggleTodo.type,
           payload: 1
         }
       )
@@ -128,10 +128,10 @@ describe('todos reducer', () => {
   })
 })
 
-describe('addTodo', () => {
+describe('action_addTodo', () => {
   it('should generate incrementing todo IDs', () => {
-    const action1 = addTodo('a')
-    const action2 = addTodo('b')
+    const action1 = action_addTodo('a')
+    const action2 = action_addTodo('b')
 
     expect(action1.payload).toEqual({ id: 0, text: 'a' })
     expect(action2.payload).toEqual({ id: 1, text: 'b' })
