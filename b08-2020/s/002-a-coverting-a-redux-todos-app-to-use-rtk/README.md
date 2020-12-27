@@ -1,6 +1,6 @@
 
 This is the source code for "**Intermediate Tutorial: Redux Toolkit in Action**": <br>
-[https://redux.js.org/introduction/examples#todos](https://redux.js.org/introduction/examples#todos)
+[https://redux-toolkit.js.org/tutorials/intermediate-tutorial](https://redux-toolkit.js.org/tutorials/intermediate-tutorial)
 
 The excercise converts a clasical redux todos example to use redux tool kit.
 
