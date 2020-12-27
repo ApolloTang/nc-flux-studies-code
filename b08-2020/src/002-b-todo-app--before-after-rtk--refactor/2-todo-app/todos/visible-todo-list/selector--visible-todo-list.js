@@ -1,5 +1,5 @@
 import { createSelector } from '@reduxjs/toolkit'
-import { toggleTodo } from '~/todos/todos-slice/slice--todo-list'
+import { action_toggleTodo } from '~/todos/todos-slice/slice--todo-list'
 import { VisibilityFilters } from '~/todos/todos-slice/slice--filter-control'
 
 const selectTodos = state => state.todos.todoList
@@ -26,7 +26,7 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = {
-  dispatch_toggleTodo: toggleTodo
+  dispatch_toggleTodo: action_toggleTodo
 }
 
 export {
