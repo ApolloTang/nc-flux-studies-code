@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { Link } from '../../components/link'
+import { Link } from './link'
 
 import { mapStateToProps, mapDispatchToProps } from './selector--filter-control'
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { FilterControl } from './containers/filter-control/main--filter-control'
+import { FilterControl } from './filter-control/main--filter-control'
 import { VisibilityFilters } from '~/todos/todos-slice/slice--filter-control'
 
 const Footer = () => (
