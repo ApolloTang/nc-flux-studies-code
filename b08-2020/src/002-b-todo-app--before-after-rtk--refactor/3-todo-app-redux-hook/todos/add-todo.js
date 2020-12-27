@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
+import { useDispatch } from 'react-redux'
 
-import { mapDispatch } from './selector--add-todo'
+import { action_addTodo } from '~/todos/todos-slice/slice--todo-list'
 
-const AddTodoUnConnected = ({ dispatch_addTodo }) => {
+const AddTodo = ({ dispatch_addTodo }) => {
+  const dispatch = useDispatch()
   const [todoText, setTodoText] = useState('')
-
   const onChange = e => setTodoText(e.target.value)
 
   return (
@@ -16,7 +17,7 @@ const AddTodoUnConnected = ({ dispatch_addTodo }) => {
           if (!todoText.trim()) {
             return
           }
-          dispatch_addTodo(todoText)
+          dispatch(action_addTodo(todoText))
           setTodoText('')
         }}
       >
@@ -26,11 +27,6 @@ const AddTodoUnConnected = ({ dispatch_addTodo }) => {
     </div>
   )
 }
-
-const AddTodo = connect(
-  null,
-  mapDispatch
-)(AddTodoUnConnected)
 
 export {
   AddTodo
