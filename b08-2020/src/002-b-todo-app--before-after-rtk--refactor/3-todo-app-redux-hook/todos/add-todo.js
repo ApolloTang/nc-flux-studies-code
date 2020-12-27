@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import { useDispatch } from 'react-redux'
 
-import { action_addTodo } from '~/todos/todos-slice/slice--todo-list'
+import { action_addTodo } from '~/todos/slices--todos/slice--todo-list'
 
 const AddTodo = ({ dispatch_addTodo }) => {
   const dispatch = useDispatch()

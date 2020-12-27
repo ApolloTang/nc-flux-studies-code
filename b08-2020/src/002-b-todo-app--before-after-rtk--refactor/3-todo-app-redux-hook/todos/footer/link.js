@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
-import { action_setVisibilityFilter } from '~/todos/todos-slice/slice--filter-control'
+import { action_setVisibilityFilter } from '~/todos/slices--todos/slice--filter-control'
 
 const Link = ({ children, filter }) => {
   const dispatch = useDispatch()

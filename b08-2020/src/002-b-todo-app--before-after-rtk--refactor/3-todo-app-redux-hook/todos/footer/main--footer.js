@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from './link'
-import { VisibilityFilters } from '~/todos/todos-slice/slice--filter-control'
+import { VisibilityFilters } from '~/todos/slices--todos/slice--filter-control'
 
 const Footer = () => (
   <div>

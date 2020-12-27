@@ -2,7 +2,7 @@ import React from 'react'
 import { TodoItem } from './todo-item'
 import { useDispatch } from 'react-redux'
 
-import { action_toggleTodo } from '~/todos/todos-slice/slice--todo-list'
+import { action_toggleTodo } from '~/todos/slices--todos/slice--todo-list'
 
 const TodoList = ({ todos }) => {
   const dispatch = useDispatch()
