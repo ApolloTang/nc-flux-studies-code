@@ -5,7 +5,7 @@ import VisibleTodoList from '~/features/todos/VisibleTodoList'
 
 const App = () => (
   <div>
-    <h1>with rtk</h1>
+    <h1>RTK todos</h1>
     <AddTodo />
     <VisibleTodoList />
     <Footer />

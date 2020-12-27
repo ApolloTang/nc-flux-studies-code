@@ -5,6 +5,7 @@ import VisibleTodoList from '../containers/VisibleTodoList'
 
 const App = () => (
   <div>
+    <h1>classical redux todos</h1>
     <AddTodo />
     <VisibleTodoList />
     <Footer />
