@@ -1,13 +1,13 @@
-import todos, { addTodo, toggleTodo } from '../slice--todos'
+import {todosReducer, addTodo, toggleTodo } from '../slice--todo-list'
 
 describe('todos reducer', () => {
   it('should handle initial state', () => {
-    expect(todos(undefined, {})).toEqual([])
+    expect(todosReducer(undefined, {})).toEqual([])
   })
 
   it('should handle ADD_TODO', () => {
     expect(
-      todos([], {
+      todosReducer([], {
         type: addTodo.type,
         payload: {
           text: 'Run the tests',
@@ -23,7 +23,7 @@ describe('todos reducer', () => {
     ])
 
     expect(
-      todos(
+      todosReducer(
         [
           {
             text: 'Run the tests',
@@ -53,7 +53,7 @@ describe('todos reducer', () => {
     ])
 
     expect(
-      todos(
+      todosReducer(
         [
           {
             text: 'Run the tests',
@@ -95,7 +95,7 @@ describe('todos reducer', () => {
 
   it('should handle TOGGLE_TODO', () => {
     expect(
-      todos(
+      todosReducer(
         [
           {
             text: 'Run the tests',
