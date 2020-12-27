@@ -6,7 +6,7 @@ export const VisibilityFilters = {
   SHOW_ACTIVE: 'SHOW_ACTIVE'
 }
 
-const filtersSlice = createSlice({
+const slice = createSlice({
   name: 'visibilityFilters',
   initialState: VisibilityFilters.SHOW_ALL,
   reducers: {
@@ -16,6 +16,12 @@ const filtersSlice = createSlice({
   }
 })
 
-export const { setVisibilityFilter } = filtersSlice.actions
+const {
+  actions: { setVisibilityFilter },
+  reducer
+} = slice
 
-export default filtersSlice.reducer
+export {
+  reducer as reducer_visibilityFilter,
+  setVisibilityFilter as action_setVisibilityFilter
+}
