@@ -1,13 +1,13 @@
 import React from 'react'
 import { Link } from './link'
-import { VisibilityFilters } from '~/todos/slices--todos/slice--filter-control'
+import { visibilityFiltersType } from '~/todos/models'
 
 const Footer = () => (
   <div>
     <span>Show: </span>
-    <Link filter={VisibilityFilters.SHOW_ALL}>All</Link>
-    <Link filter={VisibilityFilters.SHOW_ACTIVE}>Active</Link>
-    <Link filter={VisibilityFilters.SHOW_COMPLETED}>Completed</Link>
+    <Link filter={visibilityFiltersType.SHOW_ALL}>All</Link>
+    <Link filter={visibilityFiltersType.SHOW_ACTIVE}>Active</Link>
+    <Link filter={visibilityFiltersType.SHOW_COMPLETED}>Completed</Link>
   </div>
 )
 

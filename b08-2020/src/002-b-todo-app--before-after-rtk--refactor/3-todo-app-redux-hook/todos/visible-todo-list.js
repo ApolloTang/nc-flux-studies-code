@@ -3,7 +3,7 @@ import { createSelector } from '@reduxjs/toolkit'
 import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 
-import { VisibilityFilters } from '~/todos/slices--todos/slice--filter-control'
+import { visibilityFiltersType } from '~/todos/models'
 import { TodoList } from './todo-list/main--todo-list'
 
 const selectTodos = (state) => state.todos.todoList
@@ -11,11 +11,11 @@ const selectFilter = (state) => state.todos.visibilityFilter
 
 const selectVisibleTodos = createSelector([selectTodos, selectFilter], (todos, filter) => {
   switch (filter) {
-    case VisibilityFilters.SHOW_ALL:
+    case visibilityFiltersType.SHOW_ALL:
       return todos
-    case VisibilityFilters.SHOW_COMPLETED:
+    case visibilityFiltersType.SHOW_COMPLETED:
       return todos.filter((t) => t.completed)
-    case VisibilityFilters.SHOW_ACTIVE:
+    case visibilityFiltersType.SHOW_ACTIVE:
       return todos.filter((t) => !t.completed)
     default:
       throw new Error('Unknown filter: ' + filter)
