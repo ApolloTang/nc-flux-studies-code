@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 
 import { VisibilityFilters } from '~/todos/todos-slice/slice--filter-control'
-import { TodoList } from './todo-list'
+import { TodoList } from './todo-list/main--todo-list'
 
 const selectTodos = (state) => state.todos.todoList
 const selectFilter = (state) => state.todos.visibilityFilter
